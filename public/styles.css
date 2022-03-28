@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+  margin-top: 20;
+}
+
+.card {
+  border: 1px solid #111;
+  margin: 10px 0;
+  padding: 20px;
+}
+
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+/* table td {
+  text-justify: distribute;
+  text-rendering: auto;
+  text-size-adjust: auto;
+  text-align: center;
+}   */
+
+/*   
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+th{
+  color: rgb(10, 199, 10);
+  font-style: italic;
+  font-size: large;
+}  
+
+button {
+  color:rgb(10, 199, 10);
+}
+
+td{
+  color: rgb(51, 50, 18);
+  font-weight: 400;
+} */
+  
+table tr:nth-child(even){background-color: #f2f2f2;}
+  
+table tr:hover {background-color: #ddd;}
+  
+/* table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #0ad68b;
+    color: rgb(230, 23, 23);
+  }
+ */

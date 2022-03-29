@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { Link } from 'react-router-dom';
 
 // styling the pop-up Modal Box..
 const style = {
@@ -23,19 +24,26 @@ export default function DataModal({selectedData}) {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    console.log("selectedDataDataModal: ", selectedData)
+    // console.log("selectedDataDataModal: ", selectedData)
 
      if(selectedData.address !== undefined){
         return (
             <div>
-                <Button onClick={handleOpen} 
-                color="secondary" variant="outlined">Details</Button>
+                {/* <Link to='/details'> */}
+                    <Button 
+                        onClick={handleOpen} 
+                        color="secondary" 
+                        variant="outlined"
+                    >Details</Button>
+                {/* </Link> */}
+
                 <Modal
                     open={open}
                     onClose={handleClose}
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
+
                 <Box sx={style}>
                     <Typography 
                         id="modal-modal-title" 
@@ -43,11 +51,16 @@ export default function DataModal({selectedData}) {
                         color="secondary"
                         fontFamily="Helvetica"
                         lineHeight="40px"
-                        letterSpacing="0.2rem">Detailed Data</Typography>
+                        letterSpacing="0.2rem"
+                    >Detailed Data
+                    </Typography>
 
-                    <Typography id="modal-modal-description" 
-                    sx={{ mtbp: 2, textAlign: 'left', 
-                    fontStyle: 'oblique', fontFamily: 'Monospace' }}>
+                    <Typography 
+                        id="modal-modal-description" 
+                        sx={{ mtbp: 2, 
+                        textAlign: 'left', 
+                        fontStyle: 'oblique', 
+                        fontFamily: 'Monospace' }}>
                         <div>
                             ID: {selectedData.id},
                             Name: {selectedData.name},
@@ -55,15 +68,17 @@ export default function DataModal({selectedData}) {
                             Email: {selectedData.email},
                             Phone: {selectedData.phone}, 
                             Website: {selectedData.website},
-                            Street Name: {selectedData.address.street},
                             City Name: {selectedData.address.city}
                         </div>  
                     </Typography>
                 </Box>
+                
                 </Modal>
-            </div>);
+            </div>
+        );
 
-        } else return(
+        } 
+        else return(
             <div>
                 <Button onClick={handleOpen} 
                 color="secondary" variant="outlined">Details</Button>

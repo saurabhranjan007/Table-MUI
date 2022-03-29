@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { DataGrid } from '@mui/x-data-grid';
-// import DataModal from "./DataModal"
-import Details from "../pages/Details";
+import DataModal from "./DataModal"
+// import Details from "../pages/Details";
 
 
 function TableMUI(props) {
@@ -11,25 +11,16 @@ function TableMUI(props) {
     // defining the column section of the table 
     const columns = [
         {field: "id", headerName: "ID", width: 100},
-        {field: "name", headerName: "Name", width: 200},
+        {field: "name", headerName: "Name", width: 250},
         {field: "username", headerName: "User Name", width: 200},
         {field: "email", headerName: "Email", width: 250},
-        {field: "phone", headerName: "Phone", width: 250},
+        {field: "phone", headerName: "Phone", width: 300},
         {field: "website", headerName: "Website", width: 200}, 
-
-        {
-            field: "address",
-            headerName: "Street Name",
-            width: 150,
-            renderCell: (params) => {
-              return <div>{params.row.address.street}</div>;
-            },
-       },
 
        {
             field: "address",
             headerName: "City Name",
-            width: 150,
+            width: 200,
             renderCell: (params) => {
             return <div>{params.row.address.city}</div>;
             },
@@ -52,8 +43,7 @@ function TableMUI(props) {
                             });
                             setSelectedData(thisRow)};
 
-                // return <div onClick={onClick}><DataModal selectedData={selectedData}/></div>
-                return <div onClick={onClick}><Details /></div>
+                return <div onClick={onClick}><DataModal selectedData={selectedData}/></div>
                 },
             }
     ]

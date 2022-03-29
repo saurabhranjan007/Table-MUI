@@ -1,7 +1,30 @@
 .App {
-  text-align: center;
-  margin-top: 20;
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  align-items: center;
+  /* margin-top: 20; */
 }
+
+.nav{
+  list-style-type: none;
+  width: 500;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Link:link {
+  color: red;
+}
+Link:visited {
+  color: green;
+}
+Link:hover {
+  color: hotpink;
+}
+Link:active {
+  color: blue;
+} */
 
 .card {
   border: 1px solid #111;
